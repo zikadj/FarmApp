@@ -39,8 +39,8 @@ public boolean addOwner(Owner o) {
 			f = true;
 		}
 		
-		}catch (Exception e) {
-		e.printStackTrace();
+		}catch (Exception ex) {
+		ex.printStackTrace();
 		}return f;
 
 	}
