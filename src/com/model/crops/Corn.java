@@ -42,7 +42,7 @@ public class Corn extends Crops {
 		String ripeningTame = sc.next();
 		System.out.print("Shape:");
 		shape = sc.next();
-		System.out.print("Weight in kg:");
+		System.out.print("Weight:");
 		weight = sc.nextInt();
 		System.out.print("Resistence:");
 		resistance = sc.nextInt();
@@ -57,7 +57,7 @@ public class Corn extends Crops {
     	System.out.println("Ripening time:" + getRipeningTame());
     	System.out.println("Shape:" + getShape() );
     	System.out.println("Price:" + getPrice() );
-    	System.out.println("Weight in kg:" + getWeight() );
+    	System.out.println("Weight:" + getWeight() );
     	System.out.println("Resistence:" + getResistance() );
     }  
     }
