@@ -68,7 +68,7 @@ public void setVaccinated(String vaccinated) {
 
 @Override
 	public String ageAninamal() {
-	if(age <= 2) {
+	if(age <= 3) {
 		return  getType() + " is young";	
 	}else {
 		return getType() + " is old";

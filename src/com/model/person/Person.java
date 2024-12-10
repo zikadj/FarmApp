@@ -1,7 +1,5 @@
 package com.model.person;
 
-import java.util.Scanner;
-
 public abstract class Person {
 	
 protected String firstName;

@@ -61,4 +61,13 @@ public class Goat extends Animal{
 		System.out.println("Weight:" + getWeight() );
 	}
 	
+	@Override
+	public String ageAninamal() {
+		if(age <= 2) {
+			return  getType() + " is young";	
+		}else {
+			return getType() + " is old";
+		}
+	}
+	
 }

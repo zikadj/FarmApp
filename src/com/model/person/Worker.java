@@ -7,10 +7,10 @@ public class Worker extends Person{
 private int cardNumber;
 private int numberTel;
 private String position;
-private String salary;
+private double salary;
 private int lengthOfService;
 
-public Worker(String firstName, String lastName, int age, int cardNumber, int numberTel, String position, String salary,
+public Worker(String firstName, String lastName, int age, int cardNumber, int numberTel, String position, double salary,
 		int lengthOfService) {
 	super(firstName, lastName, age);
 	this.cardNumber = cardNumber;
@@ -44,11 +44,11 @@ public void setPosition(String position) {
 	this.position = position;
 }
 
-public String getSalary() {
+public double getSalary() {
 	return salary;
 }
 
-public void setSalary(String salary) {
+public void setSalary(double salary) {
 	this.salary = salary;
 }
 
@@ -74,9 +74,9 @@ cardNumber = sc.nextInt();
 System.out.print("Enter telephon number:");
 numberTel = sc.nextInt();
 System.out.print("Position:");
-firstName = sc.next();
+position = sc.next();
 System.out.print("Selary:");
-firstName = sc.next();
+salary = sc.nextDouble();
 System.out.print("Enter lenght of service:");
 lengthOfService = sc.nextInt();
 
@@ -96,4 +96,3 @@ System.out.println("Lenght of service:" + getLengthOfService());
 }
 
 
- 

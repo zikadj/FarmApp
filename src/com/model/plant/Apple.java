@@ -3,7 +3,7 @@ package com.model.plant;
 import java.util.Scanner;
 
 public class Apple extends Plant{
- 
+	 
 private double calories;
 private String taste;
 
