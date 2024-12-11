@@ -47,6 +47,7 @@ public class Goat extends Animal{
 			dailiYieldMilk = sc.nextDouble();
 			System.out.print("Weight:");
 			weight = sc.nextDouble();
+			
 	}
 	
 	@Override
@@ -68,6 +69,12 @@ public class Goat extends Animal{
 		}else {
 			return getType() + " is old";
 		}
+	}
+
+	@Override
+	public void move() {
+		System.out.print("Goat jumps.");
+		
 	}
 	
 }

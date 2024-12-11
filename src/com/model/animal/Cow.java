@@ -75,4 +75,10 @@ public void setVaccinated(String vaccinated) {
 	}
 	}
 
+@Override
+public void move() {
+	System.out.print("Cow is wolking.");
+	
+}
+
 }

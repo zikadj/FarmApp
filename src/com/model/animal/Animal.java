@@ -58,6 +58,8 @@ public void setRace(String race) {
 	this.race = race;
 }
 
+public abstract void move();
+
 public void enterAnimal() {
 	Scanner sc = new Scanner(System.in);
 	System.out.println("Enter information about animal:");

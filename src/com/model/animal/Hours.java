@@ -2,13 +2,13 @@ package com.model.animal;
 
 import java.util.Scanner;
 
-public class Hours extends Animal{
-	public String endurance;
+public class Hours extends Animal implements Gallop{
+	public double endurance;
 	public double speed;
 	public double weight;
 	public double haight;
 	
-	public Hours(String type, String name, int age, String helthStatus, String race, String endurance, double speed,
+	public Hours(String type, String name, int age, String helthStatus, String race, double endurance, double speed,
 			double weight, double haight) {
 		super(type, name, age, helthStatus, race);
 		this.endurance = endurance;
@@ -17,11 +17,11 @@ public class Hours extends Animal{
 		this.haight = haight;
 	}
 
-	public String getEndurance() {
+	public double getEndurance() {
 		return endurance;
 	}
 
-	public void setEndurance(String endurance) {
+	public void setEndurance(double endurance) {
 		this.endurance = endurance;
 	}
 
@@ -49,6 +49,12 @@ public class Hours extends Animal{
 		this.haight = haight;
 	}
 	
+	
+	@Override
+	public void move() {
+		System.out.print("Hourse is move elegance.");
+	}
+	
 	@Override
 	public void enterAnimal() {
 		Scanner sc = new Scanner(System.in);
@@ -64,7 +70,7 @@ public class Hours extends Animal{
 		System.out.print("Race:");
 		race = sc.next();
 		System.out.print("Endurence:");
-		endurance = sc.next();
+		endurance = sc.nextDouble();
 		System.out.print("Speed:");
 		speed = sc.nextDouble();
 		System.out.print("Weight:");
@@ -86,7 +92,9 @@ public class Hours extends Animal{
 		System.out.println("Endurence:" + getEndurance() );
 		System.out.println("Speed:" + getSpeed() );
 		System.out.println("Weight:" + getWeight() );
-		System.out.println("Haight:" + getHaight() );
+		System.out.println("Haight:" + getHaight());
+
+
 
 	}
 	
@@ -99,6 +107,24 @@ public class Hours extends Animal{
 		}
 		
 	}
+
+	@Override
+	public void gallop() {
+		System.out.print("Hourse gallop on speed" + speed + "km/h");
+		
+	}
+
+	@Override
+	public double currentSpeed() {
+		return speed;
+	}
+
+	@Override
+	public double maxDistance() {
+		return endurance;
+	}
+
+	
 	}
 	
 	
