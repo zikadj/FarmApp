@@ -2,13 +2,13 @@ package com.model.animal;
 
 import java.util.Scanner;
 
-public class Hours extends Animal implements Gallop{
+public class Horse extends Animal implements Gallop{
 	public double endurance;
 	public double speed;
 	public double weight;
 	public double haight;
 	
-	public Hours(String type, String name, int age, String helthStatus, String race, double endurance, double speed,
+	public Horse(String type, String name, int age, String helthStatus, String race, double endurance, double speed,
 			double weight, double haight) {
 		super(type, name, age, helthStatus, race);
 		this.endurance = endurance;
@@ -16,7 +16,7 @@ public class Hours extends Animal implements Gallop{
 		this.weight = weight;
 		this.haight = haight;
 	}
-
+	
 	public double getEndurance() {
 		return endurance;
 	}
@@ -50,14 +50,16 @@ public class Hours extends Animal implements Gallop{
 	}
 	
 	
+	
 	@Override
 	public void move() {
-		System.out.print("Hourse is move elegance.");
+		System.out.print("Horse is move elegance.");
 	}
 	
 	@Override
 	public void enterAnimal() {
 		Scanner sc = new Scanner(System.in);
+		try{
 		System.out.println("Enter information about animal:");
 		System.out.print("Enter animal type:");
 		type = sc.next();
@@ -77,7 +79,9 @@ public class Hours extends Animal implements Gallop{
 		weight = sc.nextDouble();
 		System.out.print("Haight:");
 		haight = sc.nextDouble();
-			
+		}catch(Exception e) {
+			System.out.print("Incorrect input, try again");
+		}
 		}
 	
 	
@@ -93,7 +97,8 @@ public class Hours extends Animal implements Gallop{
 		System.out.println("Speed:" + getSpeed() );
 		System.out.println("Weight:" + getWeight() );
 		System.out.println("Haight:" + getHaight());
-
+       
+        
 
 
 	}
@@ -110,7 +115,7 @@ public class Hours extends Animal implements Gallop{
 
 	@Override
 	public void gallop() {
-		System.out.print("Hourse gallop on speed" + speed + "km/h");
+		System.out.print("Horse gallop on speed" + speed + "km/h");
 		
 	}
 

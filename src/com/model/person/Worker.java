@@ -3,7 +3,8 @@ package com.model.person;
 import java.util.Scanner;
 
 public class Worker extends Person{
-
+	
+private int id;
 private int cardNumber;
 private int numberTel;
 private String position;
@@ -11,13 +12,14 @@ private double salary;
 private int lengthOfService;
 
 public Worker(String firstName, String lastName, int age, int cardNumber, int numberTel, String position, double salary,
-		int lengthOfService) {
+		int lengthOfService,int id) {
 	super(firstName, lastName, age);
 	this.cardNumber = cardNumber;
 	this.numberTel = numberTel;
 	this.position = position;
 	this.salary = salary;
 	this.lengthOfService = lengthOfService;
+	this.id = id;
 }
 
 public int getCardNumber() {
@@ -59,6 +61,16 @@ public int getLengthOfService() {
 public void setLengthOfService(int lengthOfService) {
 	this.lengthOfService = lengthOfService;
 }
+
+
+public int getId() {
+	return id;
+}
+
+public void setId(int id) {
+	this.id = id;
+}
+
 @Override
 public void enterPerson() {
 Scanner sc = new Scanner(System.in);
