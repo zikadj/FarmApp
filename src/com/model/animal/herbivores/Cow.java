@@ -9,9 +9,9 @@ public class Cow extends Animal {
 	private double dailyMilkYield;
 	private String vaccinated;
 
-	public Cow(String type, String name, int age, String helthStatus, String race, double dailyMilkYield,
+	public Cow(String species, String name, int age, String healthStatus, String breed, double dailyMilkYield,
 			String vaccinated) {
-		super(type, name, age, helthStatus, race);
+		super(species, name, age, healthStatus, breed);
 		this.dailyMilkYield = dailyMilkYield;
 		this.vaccinated = vaccinated;
 	}
@@ -37,7 +37,7 @@ public class Cow extends Animal {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter information about animal:");
 		System.out.print("Enter animal type:");
-		type = sc.next();
+		species = sc.next();
 		System.out.print("Enter animal name:");
 		name = sc.next();
 		System.out.print("Enter animal age:");
@@ -45,7 +45,7 @@ public class Cow extends Animal {
 		System.out.print("Health status:");
 		healthStatus = sc.next();
 		System.out.print("Race:");
-		race = sc.next();
+		breed = sc.next();
 		System.out.print("Daily yield milk:");
 		dailyMilkYield = sc.nextDouble();
 		System.out.print("Vaccinated:");
@@ -56,11 +56,11 @@ public class Cow extends Animal {
 	@Override
 	public void showAnimal() {
 		System.out.println("Show information about animal:");
-		System.out.println("Animal type:" + getType());
+		System.out.println("Animal type:" + getSpecies());
 		System.out.println("Animal name:" + getName());
 		System.out.println("Animal age:" + getAge());
 		System.out.println("Health status:" + getHealthStatus());
-		System.out.println("Race:" + getRace());
+		System.out.println("Race:" + getBreed());
 		System.out.println("Daily yield milk:" + getDailyMilkYield());
 		System.out.println("Vaccinated:" + getVaccinated());
 
@@ -69,9 +69,9 @@ public class Cow extends Animal {
 	@Override
 	public String ageAnimal() {
 		if (age <= 3) {
-			return getType() + " is young";
+			return getSpecies() + " is young";
 		} else {
-			return getType() + " is old";
+			return getSpecies() + " is old";
 		}
 	}
 

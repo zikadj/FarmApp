@@ -9,9 +9,9 @@ public class Goat extends Animal {
 	private double dailiYieldMilk;
 	private double weight;
 
-	public Goat(String type, String name, int age, String healthStatus, String race, double dailiYieldMilk,
+	public Goat(String species, String name, int age, String healthStatus, String breed, double dailiYieldMilk,
 			double weight) {
-		super(type, name, age, healthStatus, race);
+		super(species, name, age, healthStatus, breed);
 		this.dailiYieldMilk = dailiYieldMilk;
 		this.weight = weight;
 	}
@@ -37,7 +37,7 @@ public class Goat extends Animal {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter information about animal:");
 		System.out.print("Enter animal type:");
-		type = sc.next();
+		species = sc.next();
 		System.out.print("Enter animal name:");
 		name = sc.next();
 		System.out.print("Enter animal age:");
@@ -45,7 +45,7 @@ public class Goat extends Animal {
 		System.out.print("Health status:");
 		healthStatus = sc.next();
 		System.out.print("Race:");
-		race = sc.next();
+		breed = sc.next();
 		System.out.print("Daily yield milk:");
 		dailiYieldMilk = sc.nextDouble();
 		System.out.print("Weight:");
@@ -56,11 +56,11 @@ public class Goat extends Animal {
 	@Override
 	public void showAnimal() {
 		System.out.println("Show information about animal:");
-		System.out.println("Animal type:" + getType());
+		System.out.println("Animal type:" + getSpecies());
 		System.out.println("Animal name:" + getName());
 		System.out.println("Animal age:" + getAge());
 		System.out.println("Health status:" + getHealthStatus());
-		System.out.println("Race:" + getRace());
+		System.out.println("Race:" + getBreed());
 		System.out.println("Daily yield milk:" + getDailiYieldMilk());
 		System.out.println("Weight:" + getWeight());
 	}
@@ -68,9 +68,9 @@ public class Goat extends Animal {
 	@Override
 	public String ageAnimal() {
 		if (age <= 2) {
-			return getType() + " is young";
+			return getSpecies() + " is young";
 		} else {
-			return getType() + " is old";
+			return getSpecies() + " is old";
 		}
 	}
 

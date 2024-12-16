@@ -12,9 +12,9 @@ public class Horse extends Animal implements Gallop {
 	public double weight;
 	public double height;
 
-	public Horse(String type, String name, int age, String healthStatus, String race, double endurance, double speed,
-			double weight, double height) {
-		super(type, name, age, healthStatus, race);
+	public Horse(String species, String name, int age, String healthStatus, String breed, double endurance,
+			double speed, double weight, double height) {
+		super(species, name, age, healthStatus, breed);
 		this.endurance = endurance;
 		this.speed = speed;
 		this.weight = weight;
@@ -64,7 +64,7 @@ public class Horse extends Animal implements Gallop {
 		try {
 			System.out.println("Enter information about animal:");
 			System.out.print("Enter animal type:");
-			type = sc.next();
+			species = sc.next();
 			System.out.print("Enter animal name:");
 			name = sc.next();
 			System.out.print("Enter animal age:");
@@ -72,7 +72,7 @@ public class Horse extends Animal implements Gallop {
 			System.out.print("Health status:");
 			healthStatus = sc.next();
 			System.out.print("Race:");
-			race = sc.next();
+			breed = sc.next();
 			System.out.print("Endurence:");
 			endurance = sc.nextDouble();
 			System.out.print("Speed:");
@@ -89,11 +89,11 @@ public class Horse extends Animal implements Gallop {
 	@Override
 	public void showAnimal() {
 		System.out.println("Show information about animal:");
-		System.out.println("Animal type:" + getType());
+		System.out.println("Animal type:" + getSpecies());
 		System.out.println("Animal name:" + getName());
 		System.out.println("Animal age:" + getAge());
 		System.out.println("Health status:" + getHealthStatus());
-		System.out.println("Race:" + getRace());
+		System.out.println("Race:" + getBreed());
 		System.out.println("Endurence:" + getEndurance());
 		System.out.println("Speed:" + getSpeed());
 		System.out.println("Weight:" + getWeight());
@@ -104,9 +104,9 @@ public class Horse extends Animal implements Gallop {
 	@Override
 	public String ageAnimal() {
 		if (age <= 4) {
-			return getType() + " is young";
+			return getSpecies() + " is young";
 		} else {
-			return getType() + " is old";
+			return getSpecies() + " is old";
 		}
 
 	}
