@@ -1,4 +1,4 @@
-package com.FarmApp.abstracts;
+package com.model.abstracts;
 
 import java.time.LocalDate;
 import java.util.Scanner;

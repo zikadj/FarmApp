@@ -1,4 +1,4 @@
-package com.FarmApp.interfaces;
+package com.model.intefaces;
 
 import java.util.Scanner;
 

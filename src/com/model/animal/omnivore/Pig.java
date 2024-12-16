@@ -1,6 +1,6 @@
 package com.model.animal.omnivore;
 
-import com.FarmApp.abstracts.Animal;
+import com.model.abstracts.Animal;
 
 public class Pig extends Animal {
 

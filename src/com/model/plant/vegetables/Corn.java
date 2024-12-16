@@ -3,7 +3,7 @@ package com.model.plant.vegetables;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-import com.FarmApp.abstracts.Crops;
+import com.model.abstracts.Crops;
 
 public class Corn extends Crops {
 

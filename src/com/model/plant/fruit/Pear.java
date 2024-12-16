@@ -2,7 +2,7 @@ package com.model.plant.fruit;
 
 import java.util.Scanner;
 
-import com.FarmApp.abstracts.Plant;
+import com.model.abstracts.Plant;
 
 import java.util.Scanner;
 

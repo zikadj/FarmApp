@@ -2,8 +2,7 @@ package com.model.person;
 
 import java.util.Scanner;
 
-import com.FarmApp.abstracts.Person;
-
+import com.model.abstracts.Person;
 
 public class Owner extends Person {
 

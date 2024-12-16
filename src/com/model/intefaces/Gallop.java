@@ -1,4 +1,4 @@
-package com.FarmApp.interfaces;
+package com.model.intefaces;
 
 public interface Gallop {
 

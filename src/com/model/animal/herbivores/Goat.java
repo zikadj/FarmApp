@@ -2,7 +2,7 @@ package com.model.animal.herbivores;
 
 import java.util.Scanner;
 
-import com.FarmApp.abstracts.Animal;
+import com.model.abstracts.Animal;
 
 public class Goat extends Animal {
 

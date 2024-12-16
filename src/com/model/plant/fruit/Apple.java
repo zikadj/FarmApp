@@ -2,9 +2,8 @@ package com.model.plant.fruit;
 
 import java.util.Scanner;
 
-import com.FarmApp.abstracts.Plant;
-import com.FarmApp.interfaces.Count;
-
+import com.model.abstracts.Plant;
+import com.model.intefaces.Count;
 
 public class Apple extends Plant implements Count {
 
@@ -12,8 +11,7 @@ public class Apple extends Plant implements Count {
 	private int numberApple;
 	private String taste;
 
-	public Apple(String name, String plantColor,
-			double height, String poisonous, Double calories, String taste,
+	public Apple(String name, String plantColor, double height, String poisonous, Double calories, String taste,
 			int numberApple) {
 		super(name, plantColor, height, poisonous);
 		this.calories = calories;

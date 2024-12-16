@@ -2,9 +2,8 @@ package com.model.animal.herbivores;
 
 import java.util.Scanner;
 
-import com.FarmApp.abstracts.Animal;
-import com.FarmApp.interfaces.Gallop;
-
+import com.model.abstracts.Animal;
+import com.model.intefaces.Gallop;
 
 public class Horse extends Animal implements Gallop {
 

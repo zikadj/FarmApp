@@ -1,4 +1,4 @@
-package com.FarmApp.abstracts;
+package com.model.abstracts;
 
 public abstract class Plant {
 
