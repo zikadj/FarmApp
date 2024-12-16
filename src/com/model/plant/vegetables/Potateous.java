@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 import com.FarmApp.abstracts.Plant;
 
+
+
 public class Potateous extends Plant {
 
 	private double calories;

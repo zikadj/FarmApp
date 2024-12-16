@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 import com.FarmApp.abstracts.Plant;
 
+
+
 public class Strawberry extends Plant {
 
 	public String typeStrawberry;

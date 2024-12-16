@@ -5,6 +5,7 @@ import java.util.Scanner;
 import com.FarmApp.abstracts.Animal;
 import com.FarmApp.interfaces.Gallop;
 
+
 public class Horse extends Animal implements Gallop {
 
 	public double endurance;

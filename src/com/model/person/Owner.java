@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.FarmApp.abstracts.Person;
 
+
 public class Owner extends Person {
 
 	public int pib;
