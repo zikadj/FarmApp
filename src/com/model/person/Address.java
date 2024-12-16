@@ -60,6 +60,7 @@ public class Address {
 		street = sc.next();
 		System.out.print("Enter house number:");
 		houseNumber = sc.nextInt();
+		sc.close();
 	}
 
 	public void showAdres() {

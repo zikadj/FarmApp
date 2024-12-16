@@ -72,6 +72,7 @@ public abstract class Animal {
 		healthStatus = sc.next();
 		System.out.print("Race:");
 		race = sc.next();
+		sc.close();
 
 	}
 

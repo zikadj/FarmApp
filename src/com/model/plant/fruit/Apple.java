@@ -61,6 +61,7 @@ public class Apple extends Plant implements Count {
 		calories = sc.nextDouble();
 		System.out.print("Taste plant:");
 		taste = sc.next();
+		sc.close();
 	}
 
 	public void showPlant() {
@@ -97,6 +98,7 @@ public class Apple extends Plant implements Count {
 		calories = sc.nextDouble();
 		System.out.print("Taste plant:");
 		taste = sc.next();
+		sc.close();
 
 	}
 

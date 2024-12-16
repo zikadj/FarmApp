@@ -6,7 +6,7 @@ import java.util.Scanner;
 import com.FarmApp.abstracts.Crops;
 
 public class Corn extends Crops {
-	
+
 	public int weight;
 	public int resistance;
 
@@ -49,7 +49,7 @@ public class Corn extends Crops {
 		weight = sc.nextInt();
 		System.out.print("Resistence:");
 		resistance = sc.nextInt();
-
+		sc.close();
 	}
 
 	@Override
