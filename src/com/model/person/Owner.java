@@ -2,52 +2,66 @@ package com.model.person;
 
 import java.util.Scanner;
 
-public class Owner extends Person{
+import com.FarmApp.abstracts.Person;
+
+public class Owner extends Person {
+
 	public int pib;
 	public int numberTel;
-	public double objectValue;
+	public double priceFarm;
 	public int yearOfAcquisition;
-	public Adress adr;
-	public Owner(String firstName, String lastName, int age, int pib, int numberTel, double objectValue,
-			int yearOfAcquisition, Adress adr) {
+	public Address address;
+
+	public Owner(String firstName, String lastName, int age, int pib, int numberTel, double priceFarm,
+			int yearOfAcquisition, Address address) {
 		super(firstName, lastName, age);
 		this.pib = pib;
 		this.numberTel = numberTel;
-		this.objectValue = objectValue;
+		this.priceFarm = priceFarm;
 		this.yearOfAcquisition = yearOfAcquisition;
-		this.adr = adr;
+		this.address = address;
 	}
+
 	public int getPib() {
 		return pib;
 	}
+
 	public void setPib(int pib) {
 		this.pib = pib;
 	}
+
 	public int getNumberTel() {
 		return numberTel;
 	}
+
 	public void setNumberTel(int numberTel) {
 		this.numberTel = numberTel;
 	}
-	public double getObjectValue() {
-		return objectValue;
+
+	public double getPriceFarm() {
+		return priceFarm;
 	}
-	public void setObjectValue(double objectValue) {
-		this.objectValue = objectValue;
+
+	public void setPriceFarm(double priceFarm) {
+		this.priceFarm = priceFarm;
 	}
+
 	public int getYearOfAcquisition() {
 		return yearOfAcquisition;
 	}
+
 	public void setYearOfAcquisition(int yearOfAcquisition) {
 		this.yearOfAcquisition = yearOfAcquisition;
 	}
-	public Adress getAdr() {
-		return adr;
+
+	public Address getAddress() {
+		return address;
 	}
-	public void setAdr(Adress adr) {
-		this.adr = adr;
+
+	public void setAddress(Address address) {
+		this.address = address;
 	}
-	
+
 	@Override
 	public void enterPerson() {
 		Scanner sc = new Scanner(System.in);
@@ -58,16 +72,17 @@ public class Owner extends Person{
 		lastName = sc.next();
 		System.out.print("Enter age:");
 		age = sc.nextInt();
-		System.out.print("Enter adress:");
-		adr.enterAdres();
+		System.out.print("Enter adrress:");
+		address.enterAdres();
 	}
+
 	@Override
 	public void showPerson() {
 		System.out.println("Show person inforamtion:");
 		System.out.println("First name:" + getFirstName());
 		System.out.println("Last name:" + getLastName());
 		System.out.println("Age:" + getAge());
-		adr.showAdres();
+		address.showAdres();
 	}
 
 }
