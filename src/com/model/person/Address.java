@@ -49,9 +49,9 @@ public class Address {
 		this.houseNumber = houseNumber;
 	}
 
-	public void enterAdres() {
+	public void enterAddress() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter owner adress");
+		System.out.println("Enter owner address:");
 		System.out.print("Enter district:");
 		district = sc.next();
 		System.out.print("Enter city:");
@@ -63,8 +63,8 @@ public class Address {
 		sc.close();
 	}
 
-	public void showAdres() {
-		System.out.println("Show owner adress");
+	public void showAddress() {
+		System.out.println("Show owner address");
 		System.out.print("District:" + getDistrict());
 		System.out.print("City:" + getCity());
 		System.out.print("Street:" + getStreet());

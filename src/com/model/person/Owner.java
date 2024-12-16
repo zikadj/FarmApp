@@ -7,18 +7,18 @@ import com.FarmApp.abstracts.Person;
 public class Owner extends Person {
 
 	public int pib;
-	public int numberTel;
+	public int phoneNumber;
 	public double priceFarm;
-	public int yearOfAcquisition;
+	public int yearOfEstablishment;
 	public Address address;
 
-	public Owner(String firstName, String lastName, int age, int pib, int numberTel, double priceFarm,
-			int yearOfAcquisition, Address address) {
+	public Owner(String firstName, String lastName, int age, int pib, int phoneNumber, double priceFarm,
+			int yearOfEstablishment, Address address) {
 		super(firstName, lastName, age);
 		this.pib = pib;
-		this.numberTel = numberTel;
+		this.phoneNumber = phoneNumber;
 		this.priceFarm = priceFarm;
-		this.yearOfAcquisition = yearOfAcquisition;
+		this.yearOfEstablishment = yearOfEstablishment;
 		this.address = address;
 	}
 
@@ -30,12 +30,12 @@ public class Owner extends Person {
 		this.pib = pib;
 	}
 
-	public int getNumberTel() {
-		return numberTel;
+	public int getPhoneNumber() {
+		return phoneNumber;
 	}
 
-	public void setNumberTel(int numberTel) {
-		this.numberTel = numberTel;
+	public void setPhoneNumber(int phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
 	public double getPriceFarm() {
@@ -46,12 +46,12 @@ public class Owner extends Person {
 		this.priceFarm = priceFarm;
 	}
 
-	public int getYearOfAcquisition() {
-		return yearOfAcquisition;
+	public int getYearOfEstablishment() {
+		return yearOfEstablishment;
 	}
 
-	public void setYearOfAcquisition(int yearOfAcquisition) {
-		this.yearOfAcquisition = yearOfAcquisition;
+	public void setYearOfEstablishment(int yearOfEstablishment) {
+		this.yearOfEstablishment = yearOfEstablishment;
 	}
 
 	public Address getAddress() {
@@ -72,8 +72,17 @@ public class Owner extends Person {
 		lastName = sc.next();
 		System.out.print("Enter age:");
 		age = sc.nextInt();
+		System.out.print("Enter pib number:");
+		pib = sc.nextInt();
+		System.out.print("Enter phone number:");
+		phoneNumber = sc.nextInt();
+		System.out.print("Enter farm price:");
+		priceFarm = sc.nextDouble();
+		System.out.print("Enter the year of farms establishment:");
+		yearOfEstablishment = sc.nextInt();
 		System.out.print("Enter adrress:");
-		address.enterAdres();
+		address.enterAddress();
+		sc.close();
 	}
 
 	@Override
@@ -82,7 +91,11 @@ public class Owner extends Person {
 		System.out.println("First name:" + getFirstName());
 		System.out.println("Last name:" + getLastName());
 		System.out.println("Age:" + getAge());
-		address.showAdres();
+		System.out.println("Pib number:" + getPib());
+		System.out.println("Phone number:" + getPhoneNumber());
+		System.out.println("Farm prices:" + getPriceFarm());
+		System.out.println("Year of farms establishment:" + getYearOfEstablishment());
+		address.showAddress();
 	}
 
 }

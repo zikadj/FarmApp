@@ -8,19 +8,27 @@ public class Worker extends Person {
 
 	private int id;
 	private int cardNumber;
-	private int numberTel;
+	private int phoneNumber;
 	private String position;
 	private double salary;
 	private int lengthOfService;
 
-	public Worker(String firstName, String lastName, int age, int cardNumber, int numberTel, String position,
-			double salary, int lengthOfService, int id) {
+	public Worker(String firstName, String lastName, int age, int id, int cardNumber, int phoneNumber, String position,
+			double salary, int lengthOfService) {
 		super(firstName, lastName, age);
+		this.id = id;
 		this.cardNumber = cardNumber;
-		this.numberTel = numberTel;
+		this.phoneNumber = phoneNumber;
 		this.position = position;
 		this.salary = salary;
 		this.lengthOfService = lengthOfService;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -32,12 +40,12 @@ public class Worker extends Person {
 		this.cardNumber = cardNumber;
 	}
 
-	public int getNumberTel() {
-		return numberTel;
+	public int getPhoneNumber() {
+		return phoneNumber;
 	}
 
-	public void setNumberTel(int numberTel) {
-		this.numberTel = numberTel;
+	public void setPhoneNumber(int phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
 	public String getPosition() {
@@ -64,14 +72,6 @@ public class Worker extends Person {
 		this.lengthOfService = lengthOfService;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
 	@Override
 	public void enterPerson() {
 		Scanner sc = new Scanner(System.in);
@@ -85,7 +85,7 @@ public class Worker extends Person {
 		System.out.print("Card number:");
 		cardNumber = sc.nextInt();
 		System.out.print("Enter telephon number:");
-		numberTel = sc.nextInt();
+		phoneNumber = sc.nextInt();
 		System.out.print("Position:");
 		position = sc.next();
 		System.out.print("Selary:");
@@ -102,7 +102,7 @@ public class Worker extends Person {
 		System.out.println("Last name:" + getLastName());
 		System.out.println("Age:" + getAge());
 		System.out.println("Card number:" + getCardNumber());
-		System.out.println("Telephon number:" + getNumberTel());
+		System.out.println("Phone number:" + getPhoneNumber());
 		System.out.println("Position:" + getPosition());
 		System.out.println("Selary:" + getSalary());
 		System.out.println("Lenght of service:" + getLengthOfService());
